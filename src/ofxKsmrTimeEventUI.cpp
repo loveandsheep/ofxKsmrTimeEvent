@@ -11,7 +11,7 @@
 void ofxKsmrTimeEventUI::setup(ofxKsmrOscDistributor *dst){
 
 	timer.setOscDistributor(dst);
-	timer.load(CONTENT_PATH + "settings/timeEvent.xml");
+	timer.load("settings/timeEvent.xml");
 
 	ofAddListener(ofxKsmrTimeEvent::newEvent, this, &ofxKsmrTimeEventUI::timeEvent);
 
@@ -71,7 +71,7 @@ void ofxKsmrTimeEventUI::update(){
 void ofxKsmrTimeEventUI::guiEvent(ofxUIEventArgs &e) {
 
 	ofxUIWidget* w = e.widget;
-
+	
 	if (w->getState() == OFX_UI_STATE_DOWN){
 
 		if (w->getName() == "Disable Event"){
@@ -160,7 +160,7 @@ void ofxKsmrTimeEventUI::guiEvent(ofxUIEventArgs &e) {
 
 		if (w->getName() == "Save"){
 			timer.syncTimeTable(sync_addr, sync_port, true);
-			timer.save(CONTENT_PATH + "settings/timeEvent.xml");
+			timer.save("settings/timeEvent.xml");
 		}
 
 	}

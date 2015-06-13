@@ -9,7 +9,6 @@
 #ifndef __SignageController__ofxKsmrTimeEvent__
 #define __SignageController__ofxKsmrTimeEvent__
 
-#include "ViewerConstants.h"
 #include "ofMain.h"
 #include "ofxKsmrOscDistributor.h"
 
@@ -138,7 +137,7 @@ public:
 	}
 
 	void doEvent(){
-
+		
 		ofxKsmrTimeEventArgs arg;
 		arg.queuePtr = this;
 		arg.h = h;

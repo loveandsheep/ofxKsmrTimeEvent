@@ -35,7 +35,7 @@ void ofxKsmrTimeEvent::update(){
 
 				load(xml);
 
-				if (m.getArgAsInt32(1)) save(CONTENT_PATH + "settings/timeEvent.xml");
+				if (m.getArgAsInt32(1)) save("settings/timeEvent.xml");
 
 			}
 
@@ -180,12 +180,6 @@ void ofxKsmrTimeEvent::save(ofXml &xml){
 		xml.addValue("Repeat",q->repeat);
 
 		cnt++;
-	}
-
-
-	for (int i = 0;i < 5;i++){
-
-
 	}
 
 }
